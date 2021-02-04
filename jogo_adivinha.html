@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script>
+    
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    
+    function mostra(msg) {
+        document.write(msg);
+        pulaLinha();
+    }
+    
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+    
+    function chutar(msg) {
+        return parseInt(prompt(msg));
+    }
+    
+    var limite = 10;
+    var numeroPensado = sorteia(limite);
+    var tentativas = 1;
+
+    while(tentativas <= 3) {
+        var chute = chutar("Chute um numero até " + limite + ". Tentativa: " + tentativas);
+        if(chute == numeroPensado) {
+            mostra("Você acertou! O numero pensado era: " + numeroPensado);
+            break;
+        } else {
+            mostra("Você errou!");
+        }
+        tentativas++;
+    }
+
+    mostra("FIM");
+
+</script>

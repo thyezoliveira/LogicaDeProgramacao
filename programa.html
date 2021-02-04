@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(msg) {
+        document.write(msg);
+        pulaLinha();
+    }
+
+    var medIdade = 28;
+    var anoAtual = 2021;
+    var anoChegada = 1500;
+    var difAnos = anoAtual - anoChegada;
+    var geracoes = difAnos / medIdade;
+    mostra(Math.round(geracoes));
+
+</script>

@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write("<p>" + frase + "</p>");
+        pulaLinha();
+    }
+
+    var loginCadastrado = "thyez";
+    var senhaCadastrada = "2102";
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+    
+    
+    if(loginInformado == loginCadastrado && senhaInformada == senhaCadastrada) {
+        mostra("Bem-vindo ao sistema, <strong>" + loginInformado + "</strong>");
+    } else {
+        var tentativas = 2;
+        while(tentativas > 0) {
+            alert("Login invalido! Voce tem " + tentativas + " tentativas.");
+            tentativas -= 1;
+            loginInformado = prompt("Informe novamente seu login.");
+            senhaInformada = prompt("Informe novamente sua senha.");
+        }
+
+        if(tentativas == 0) {
+            mostra("Login bloqueado, entre em contato com o administrador para desbloquear o seu login.")
+        }
+    }
+</script>

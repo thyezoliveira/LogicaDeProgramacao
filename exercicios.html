@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(msg) {
+        document.write(msg);
+        pulaLinha();
+    }
+
+    mostra("Laço usando <strong>for</strong>");
+
+    for(var i = 0; i < 10; i++) {
+        mostra("Resultado "+ i + " x 2 : " + (2 * i));
+    }
+
+    mostra("Laço usando <strong>while</strong>");
+
+    var i = 0;
+    while(i<10) {
+        mostra("Resultado "+ i + " x 2 : " + (2 * i));
+        i++;
+    }
+</script>
